@@ -6,9 +6,16 @@ namespace NantHealthAssesmentLibrary.Model.Models.Users
 {
     public abstract class User
     {
-        public void Login(string username, string password)
+        public string Username { get; private set; }
+        public User(string username)
         {
-            throw new NotImplementedException();
+            Username = username;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is User user &&
+                   Username == user.Username;
         }
     }
 }

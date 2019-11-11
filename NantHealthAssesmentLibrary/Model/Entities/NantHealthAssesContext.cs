@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesment.Db
+namespace NantHealthAssesmentLibrary.Model.Entities
 {
     public class NantHealthAssesContext : DbContext
     {

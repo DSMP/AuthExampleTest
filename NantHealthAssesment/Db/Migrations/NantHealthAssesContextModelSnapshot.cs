@@ -7,7 +7,7 @@ using NantHealthAssesment.Db;
 
 namespace NantHealthAssesment.Db.Migrations
 {
-    [DbContext(typeof(NantHealthAssesContext))]
+    [DbContext(typeof(MainNantHealthAssesContext))]
     partial class NantHealthAssesContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

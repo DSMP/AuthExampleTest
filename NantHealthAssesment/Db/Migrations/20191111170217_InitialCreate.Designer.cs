@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NantHealthAssesment.Db.Migrations
 {
-    [DbContext(typeof(NantHealthAssesContext))]
+    [DbContext(typeof(MainNantHealthAssesContext))]
     [Migration("20191111170217_InitialCreate")]
     partial class InitialCreate
     {
