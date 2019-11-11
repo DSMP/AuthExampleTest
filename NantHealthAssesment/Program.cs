@@ -1,5 +1,6 @@
 ﻿using NantHealthAssesment.Db;
 using NantHealthAssesmentLibrary.Model.Models.AnonymousUsers;
+using NantHealthAssesmentLibrary.Service.IServices;
 using NantHealthAssesmentLibrary.Services;
 using System;
 
@@ -7,7 +8,7 @@ namespace NantHealthAssesment
 {
     class Program
     {
-        AuthenticateService _authenticateService;
+        ILogin _authenticateService;
         public Program()
         {
             _authenticateService = new AuthenticateService();
