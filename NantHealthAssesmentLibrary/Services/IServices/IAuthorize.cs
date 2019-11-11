@@ -9,6 +9,6 @@ namespace NantHealthAssesmentLibrary.Service.IServices
     //Excercise 2
     public interface IAuthorize
     {
-        bool Autorize(User user, Claim userClaims);
+        bool Autorize(Claim userClaims);
     }
 }

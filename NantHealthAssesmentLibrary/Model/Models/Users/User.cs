@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NantHealthAssesmentLibrary.Service.IServices;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NantHealthAssesmentLibrary.Model.Models.Users
 {
-    public abstract class User
+    public abstract class User : IAuthorize
     {
         public string Username { get; private set; }
         public List<Claim> UserClaims { get; private set; }
@@ -27,6 +28,11 @@ namespace NantHealthAssesmentLibrary.Model.Models.Users
         public override int GetHashCode()
         {
             return HashCode.Combine(Username, UserClaims);
+        }
+
+        public virtual bool Autorize(Claim userClaims)
+        {
+            throw new NotImplementedException();
         }
     }
 }

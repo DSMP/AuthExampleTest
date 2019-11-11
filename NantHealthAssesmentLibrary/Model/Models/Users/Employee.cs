@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NantHealthAssesmentLibrary.Model.Models.Users
 {
-    public class Employee : User, IViewEmployee
+    public class Employee : User
     {
         public Employee(string username) : base(username)
         {
