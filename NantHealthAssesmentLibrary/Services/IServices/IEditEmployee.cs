@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NantHealthAssesmentLibrary.Service.IServices
 {
-    public interface IEditEmployee
+    public interface IEditEmployee : IAuthorize
     {
     }
 }

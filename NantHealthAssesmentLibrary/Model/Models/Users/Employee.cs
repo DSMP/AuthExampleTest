@@ -9,6 +9,7 @@ namespace NantHealthAssesmentLibrary.Model.Models.Users
     {
         public Employee(string username) : base(username)
         {
+            UserClaims.Add(new Claim { Name = "ViewEmployee", Value = "true" }); 
         }
 
     }

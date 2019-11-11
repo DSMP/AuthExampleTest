@@ -8,6 +8,8 @@ namespace NantHealthAssesmentLibrary.Model.Models.Users
     {
         public Administrator(string username) : base(username)
         {
+            UserClaims.Add(new Claim { Name = "ManageUser", Value = "true" });
+            UserClaims.Add(new Claim { Name = "ManagePermission", Value = "true" });
         }
     }
 }
