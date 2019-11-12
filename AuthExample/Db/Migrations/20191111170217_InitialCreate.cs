@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NantHealthAssesment.Db.Migrations
+namespace AuthExample.Db.Migrations
 {
     public partial class InitialCreate : Migration
     {

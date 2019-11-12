@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NantHealthAssesmentLibrary\NantHealthAssesmentLibrary.csproj" />
+    <ProjectReference Include="..\AuthExampleLibrary\AuthExampleLibrary.csproj" />
   </ItemGroup>
 
 </Project>

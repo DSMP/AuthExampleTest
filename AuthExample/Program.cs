@@ -1,10 +1,10 @@
-﻿using NantHealthAssesment.Db;
-using NantHealthAssesmentLibrary.Model.Models.AnonymousUsers;
-using NantHealthAssesmentLibrary.Service.IServices;
-using NantHealthAssesmentLibrary.Services;
+﻿using AuthExample.Db;
+using AuthExampleLibrary.Model.Models.AnonymousUsers;
+using AuthExampleLibrary.Service.IServices;
+using AuthExampleLibrary.Services;
 using System;
 
-namespace NantHealthAssesment
+namespace AuthExample
 {
     class Program
     {

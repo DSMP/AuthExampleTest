@@ -1,9 +1,9 @@
-﻿using NantHealthAssesmentLibrary.Model.Models.Users;
+﻿using AuthExampleLibrary.Model.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesmentLibrary.Services.IServices
+namespace AuthExampleLibrary.Services.IServices
 {
     public interface IWorkerService
     {

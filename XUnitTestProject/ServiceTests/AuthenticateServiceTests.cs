@@ -1,8 +1,8 @@
-﻿using NantHealthAssesment.Db;
-using NantHealthAssesmentLibrary.Model.Entities;
-using NantHealthAssesmentLibrary.Model.Models.AnonymousUsers;
-using NantHealthAssesmentLibrary.Model.Models.Users;
-using NantHealthAssesmentLibrary.Services;
+﻿using AuthExample.Db;
+using AuthExampleLibrary.Model.Entities;
+using AuthExampleLibrary.Model.Models.AnonymousUsers;
+using AuthExampleLibrary.Model.Models.Users;
+using AuthExampleLibrary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace XUnitTestProject.ServiceTests
         [Fact]
         public void Authenticate()
         {
-            using (var db = new MainNantHealthAssesContext())
+            using (var db = new MainAuthExampleContext())
             {
                 if (!db.Users.Where(u => u.Username.Equals("user1")).Any())
                 {

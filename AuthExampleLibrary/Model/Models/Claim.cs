@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesmentLibrary.Model.Models
+namespace AuthExampleLibrary.Model.Models
 {
     public class Claim
     {

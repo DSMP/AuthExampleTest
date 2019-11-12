@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
-using NantHealthAssesmentLibrary.Model.Entities;
-using NantHealthAssesmentLibrary.Model.Models.AnonymousUsers;
-using NantHealthAssesmentLibrary.Model.Models.Users;
-using NantHealthAssesmentLibrary.Service.IServices;
+using AuthExampleLibrary.Model.Entities;
+using AuthExampleLibrary.Model.Models.AnonymousUsers;
+using AuthExampleLibrary.Model.Models.Users;
+using AuthExampleLibrary.Service.IServices;
 
-namespace NantHealthAssesmentLibrary.Services
+namespace AuthExampleLibrary.Services
 {
     public class AuthenticateService : ILogin
     {
         public User Authenticate(AnonymousUser user)
         {
-            using (var db = new NantHealthAssesContext())
+            using (var db = new AuthExampleContext())
             {
                 var registeredUser = db.Users.Where(u => u.Username.Equals(user.Username) && u.Password.Equals(user.Password)).FirstOrDefault();
                 if (registeredUser == null)

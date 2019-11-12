@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NantHealthAssesment.Db;
+using AuthExample.Db;
 
-namespace NantHealthAssesment.Db.Migrations
+namespace AuthExample.Db.Migrations
 {
-    [DbContext(typeof(MainNantHealthAssesContext))]
+    [DbContext(typeof(MainAuthExampleContext))]
     partial class NantHealthAssesContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

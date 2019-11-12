@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesmentLibrary.Model.Models.AnonymousUsers
+namespace AuthExampleLibrary.Model.Models.AnonymousUsers
 {
     public class AnonymousUser
     {

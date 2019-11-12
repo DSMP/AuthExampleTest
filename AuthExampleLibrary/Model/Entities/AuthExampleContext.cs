@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NantHealthAssesmentLibrary.Model.Entities;
+using AuthExampleLibrary.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesmentLibrary.Model.Entities
+namespace AuthExampleLibrary.Model.Entities
 {
-    public class NantHealthAssesContext : DbContext
+    public class AuthExampleContext : DbContext
     {
         public DbSet<UserAuthenticationsEntity> Users { get; set; }
 

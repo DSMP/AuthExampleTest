@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NantHealthAssesment.Db.Migrations
+namespace AuthExample.Db.Migrations
 {
-    [DbContext(typeof(MainNantHealthAssesContext))]
+    [DbContext(typeof(MainAuthExampleContext))]
     [Migration("20191111170217_InitialCreate")]
     partial class InitialCreate
     {

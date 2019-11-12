@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NantHealthAssesmentLibrary.Model.Models.Users
+namespace AuthExampleLibrary.Model.Models.Users
 {
     public class Administrator : User
     {

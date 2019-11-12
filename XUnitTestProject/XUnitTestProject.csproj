@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuthExampleLibrary\AuthExampleLibrary.csproj" />
+    <ProjectReference Include="..\AuthExample\AuthExample.csproj" />
     <ProjectReference Include="..\NantHealthAssesmentLibrary\NantHealthAssesmentLibrary.csproj" />
     <ProjectReference Include="..\NantHealthAssesment\NantHealthAssesment.csproj" />
   </ItemGroup>
