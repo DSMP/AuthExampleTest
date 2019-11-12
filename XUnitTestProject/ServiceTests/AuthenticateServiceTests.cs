@@ -14,15 +14,16 @@ namespace XUnitTestProject.ServiceTests
 {
     public class AuthenticateServiceTests
     {
+        private readonly DbContextOptions<AuthExampleContext> _options;
 
         public AuthenticateServiceTests()
         {
+            _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
         }
         [Fact]
         public void Authenticate()
         {
             User result = null; 
-            var _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
             using (var db = new MainAuthExampleContext(_options))
             {
                 if (!db.Users.Where(u => u.Username.Equals("user1")).Any())
@@ -39,7 +40,6 @@ namespace XUnitTestProject.ServiceTests
         [Fact]
         public void NotAuthenticate()
         {
-            var _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
             using (var db = new MainAuthExampleContext(_options))
             {
                 var authService = new AuthenticateService(db);
