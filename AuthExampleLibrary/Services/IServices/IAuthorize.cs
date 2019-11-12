@@ -9,6 +9,6 @@ namespace AuthExampleLibrary.Service.IServices
     //Excercise 2
     public interface IAuthorize
     {
-        bool Autorize(Claim userClaims);
+        bool Authorize(Claim userMustHaveClaim);
     }
 }

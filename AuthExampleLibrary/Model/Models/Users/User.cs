@@ -1,6 +1,7 @@
 ﻿using AuthExampleLibrary.Service.IServices;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AuthExampleLibrary.Model.Models.Users
@@ -30,9 +31,9 @@ namespace AuthExampleLibrary.Model.Models.Users
             return HashCode.Combine(Username, UserClaims);
         }
 
-        public virtual bool Autorize(Claim userClaims)
+        public bool Authorize(Claim userMustHaveClaim)
         {
-            throw new NotImplementedException();
+            return UserClaims.Any(uc => uc.Name.Equals(userMustHaveClaim.Name) & uc.Value.Equals(userMustHaveClaim.Value));
         }
     }
 }
