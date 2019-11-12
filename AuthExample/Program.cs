@@ -1,4 +1,5 @@
 ﻿using AuthExample.Db;
+using AuthExampleLibrary.Model.Entities;
 using AuthExampleLibrary.Model.Models.AnonymousUsers;
 using AuthExampleLibrary.Service.IServices;
 using AuthExampleLibrary.Services;
@@ -8,18 +9,32 @@ namespace AuthExample
 {
     class Program
     {
+        private readonly AuthExampleContext _dbContext;
         ILogin _authenticateService;
         public Program()
         {
-            _authenticateService = new AuthenticateService();
+            _dbContext = new AuthExampleContext();
+            _authenticateService = new AuthenticateService(_dbContext);
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             Program program = new Program();
-            while (true)
+            program.MakeLoginLoop();
+        }
+
+        private void MakeLoginLoop()
+        {
+            try
             {
-                program._TryLogin();
+                while (true)
+                {
+                    _TryLogin();
+                }
+            }
+            finally
+            {
+                _dbContext.Dispose();
             }
         }
 
