@@ -1,5 +1,4 @@
-﻿using AuthExampleLibrary.Model.Attributes;
-using AuthExampleLibrary.Model.Models;
+﻿using AuthExampleLibrary.Model.Models;
 using AuthExampleLibrary.Model.Models.Users;
 using AuthExampleLibrary.Service.IServices;
 using System;
