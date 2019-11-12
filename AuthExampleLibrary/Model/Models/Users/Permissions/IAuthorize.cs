@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AuthExampleLibrary.Service.IServices
+namespace AuthExampleLibrary.Model.Models.Users.Permissions
 {
     //Excercise 2
     public interface IAuthorize
     {
-        bool Autorize(Claim userClaims);
+        bool Autorize();
     }
 }

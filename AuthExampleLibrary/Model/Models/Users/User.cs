@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AuthExampleLibrary.Model.Models.Users
 {
-    public abstract class User : IAuthorize
+    public abstract class User
     {
         public string Username { get; private set; }
         public List<Claim> UserClaims { get; private set; }

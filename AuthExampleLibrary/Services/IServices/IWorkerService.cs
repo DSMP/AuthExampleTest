@@ -1,15 +1,16 @@
 ﻿using AuthExampleLibrary.Model.Models.Users;
+using AuthExampleLibrary.Model.Models.Users.Permissions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AuthExampleLibrary.Services.IServices
 {
-    public interface IWorkerService
+    interface IWorkerService
     {
-        void EditEmployee(User curUser, Employee employeeToEdit);
-        Employee ViewEmployee(User curUser, Employee toShow);
-        void ManageUser(User curUser, User userToManage);
-        void ManagePermission(User curUser, User changeUserClaims);
+        void EditEmployee(IEditEmployee curUser, Employee employeeToEdit);
+        Employee ViewEmployee(IViewEmployee curUser, Employee toShow);
+        void ManageUser(IManageUser curUser, User userToManage);
+        void ManagePermission(IManagePermissions curUser, User changeUserClaims);
     }
 }
