@@ -14,18 +14,15 @@ namespace XUnitTestProject.ServiceTests
 {
     public class AuthenticateServiceTests
     {
-        private readonly DbContextOptions<AuthExampleContext> _options;
-        private readonly AuthenticateService _authService;
 
         public AuthenticateServiceTests()
         {
-            _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
-            _authService = new AuthenticateService(_options);
         }
         [Fact]
         public void Authenticate()
         {
-            User result = null;
+            User result = null; 
+            var _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
             using (var db = new MainAuthExampleContext(_options))
             {
                 if (!db.Users.Where(u => u.Username.Equals("user1")).Any())
@@ -34,15 +31,21 @@ namespace XUnitTestProject.ServiceTests
                     db.SaveChanges();
                 }
 
-                result = _authService.Authenticate(new AnonymousUser("user1", "pass1"));
+                var authService = new AuthenticateService(db);
+                result = authService.Authenticate(new AnonymousUser("user1", "pass1"));
             }
             Assert.Equal(new Employee("user1"), result);
         }
         [Fact]
         public void NotAuthenticate()
         {
-            var result = _authService.Authenticate(new AnonymousUser("userNotExists", "pass1"));
-            Assert.Null(result);
+            var _options = new DbContextOptionsBuilder<AuthExampleContext>().UseInMemoryDatabase("UserWasAuthenticate").Options;
+            using (var db = new MainAuthExampleContext(_options))
+            {
+                var authService = new AuthenticateService(db);
+                var result = authService.Authenticate(new AnonymousUser("userNotExists", "pass1"));
+                Assert.Null(result); 
+            }
         }
     }
 }

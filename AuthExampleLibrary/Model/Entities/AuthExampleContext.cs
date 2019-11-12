@@ -8,11 +8,15 @@ namespace AuthExampleLibrary.Model.Entities
 {
     public class AuthExampleContext : DbContext
     {
-        private DbContextOptions<AuthExampleContext> _options;
+        private DbContextOptions<AuthExampleContext> options;
+        public AuthExampleContext()
+        {
+
+        }
 
         public AuthExampleContext(DbContextOptions<AuthExampleContext> options) : base(options)
         {
-            _options = options;
+            this.options = options;
         }
 
         public DbSet<UserAuthenticationsEntity> Users { get; set; }
